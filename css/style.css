@@ -99,7 +99,7 @@ img {
 }
 
 #search {
-	width: 350px;
+	width: 250px;
   outline: none;
   font-size: 16px;
   display: block;
@@ -184,6 +184,10 @@ iframe {
 
 	.container {
 		margin: 100px auto;
+	}
+
+	#search {
+		width: 300px;
 	}
 
 	#imageGallery li {
@@ -290,6 +294,10 @@ iframe {
 }
 
 @media (min-width: 929px) {
+
+	#search {
+		width: 350px;
+	}
 
 	.btn {
     	margin-top: -330px;

@@ -25,7 +25,7 @@ function getCaption( index ) {
 	var currentLink = $('#imageGallery li').eq(index);
 	var captionText = currentLink.find('img').attr('title');
 	var captionTitle = currentLink.find('img').attr('alt').substring(8);
-	//Build caption html
+	// build caption html
 	var captionHTML = '<h2>' + captionTitle + '</h2>';	
 		captionHTML += '<span>' + captionText + '</span>';	
 	return captionHTML;
@@ -68,9 +68,9 @@ $("#imageGallery a").click( function(event) {
 // Close lighbox 
 $overlay.on('click', function(event) { 
 	// prevent closing lightbox when clicking on next/prev button
-    if( !$(event.target).closest('button').length ) {
-	    $("#overlay").hide();
-    }
+  if( !$(event.target).closest('button').length ) {
+    $("#overlay").hide();
+  }
 });
 
 // Next button
