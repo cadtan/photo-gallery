@@ -61,8 +61,8 @@ $("#imageGallery a").click( function(event) {
 	var caption = getCaption( currentIndex );
 	// show the overlay.
 	$overlay.fadeIn(250);
-	// call function to display slide
-	displaySlide( imageLocation, caption ) 
+	// call function to display slides
+	displaySlide( imageLocation, caption );
 });
 
 // Close lighbox 
@@ -76,7 +76,11 @@ $overlay.on('click', function(event) {
 // Next button
 $next.click( function(){ 
 	// if current slide is last image, stop at last else increment currentIndex
-	( currentIndex === imageCount - 1 ? currentIndex = imageCount - 1 : currentIndex++ );
+	if ( currentIndex === imageCount - 1  ) {
+		currentIndex = imageCount - 1;
+	} else {
+		currentIndex++;
+	}	
 	// update current image location and caption
 	var nextImageList = $('#imageGallery li').eq(currentIndex );	
 	var nextImageLocation = nextImageList.find('a').attr("href");
@@ -88,7 +92,11 @@ $next.click( function(){
 // Previous button
 $previous.click( function(){	
 	// if current slide is first image, stop at first else decrement currentIndex 
- 	( currentIndex === 0 ? currentIndex = 0 : currentIndex-- );
+	if ( currentIndex === 0  ) {
+		currentIndex = 0;
+	} else {
+		currentIndex--;
+	}
  	// update current image location and caption
 	var prevImageList = $('#imageGallery li').eq(currentIndex);	
 	var prevImageLocation = prevImageList.find('a').attr("href");
@@ -100,7 +108,7 @@ $previous.click( function(){
 // Search box filters photos based on the captions
 $("#search").keyup(function(){
    // retrieve the input field text 
-  var filter = $(this).val().toLowerCase();
+  var filter = $(this).val();
   // loop through each list
   $("#imageGallery li img").each(function(){
       // if the list item does not contain the text, fade it out
