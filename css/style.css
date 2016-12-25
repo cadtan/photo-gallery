@@ -268,15 +268,16 @@ iframe {
 	}
 
 	.btn {
-    	margin-top: -300px;
+    	margin-top: 26vh;
+    	font-size: 5em;
 	}
 
 	#next {
-		   margin-right: 0; 
+		right: 12vw; 
 	}
 
 	#previous {
-		   margin-left: 0; 
+		left: 12vw;
 	}
 
 	#next:before, #previous:after {	 
@@ -285,30 +286,4 @@ iframe {
 
 }
 
-@media (min-width: 900px) {
 
-	.btn {
-    	margin-top: -320px;
-	}
-
-}
-
-@media (min-width: 929px) {
-
-	#search {
-		width: 350px;
-	}
-
-	.btn {
-    	margin-top: -330px;
-	}
-
-}
-
-@media (min-width: 950px) {
-
-	.btn {
-    	margin-top: -340px;
-	}
-
-}

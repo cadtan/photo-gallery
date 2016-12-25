@@ -15,8 +15,8 @@ $slidesContainer.append($image);
 $videoContainer.append($iframe);
 $slidesContainer.append($videoContainer);
 $slidesContainer.append($caption);
-$slidesContainer.append($previous);
-$slidesContainer.append($next);
+$overlay.append($next);
+$overlay.append($previous);
 $overlay.append($slidesContainer);
 $("body").append($overlay);
 
