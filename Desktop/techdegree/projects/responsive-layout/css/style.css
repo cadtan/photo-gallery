@@ -1,0 +1,328 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	line-height: 1.6;
+	letter-spacing: 0.03em;
+	color: #666;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	margin: 0;
+}
+
+h2 {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 2em;
+	font-weight: 700;
+}
+
+h3 {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 1.6em;
+	margin-top: 1em;
+}
+
+p {
+	font-size: 1em;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+.name {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 2.5em;
+	font-weight: 700;
+	letter-spacing: -0.01em;
+	color: #252525;
+}
+
+.name,
+.main-nav {
+	text-align: center;
+}
+
+.main-nav li {
+	background-color: #fff;
+	padding: .8em 0;
+	margin: .6em 0;
+}
+
+.main-nav a {
+	font-size: 1.12em;
+	font-weight: 700;
+	display: block;
+	text-transform: uppercase;
+}
+
+.main-nav a:link,
+.main-nav a:visited,
+.phone a:link,
+.phone a:visited,
+.email a:link,
+.email a:visited,
+.back a:link,
+.back a:visited {
+	color: #686868;
+}
+
+.main-nav a:hover,
+.phone a:hover,
+.email a:hover {
+	color: #B4B3B3;
+}
+
+/* ---- Layout Containers ---- */
+
+.main-header,
+.profile,
+.portfolio,
+.main-footer {
+	padding: 18px 1.2em;
+	text-align: center;
+}
+
+.main-header,
+.main-footer {
+	background-color: #f8f8f8;
+}
+
+.profile {
+	margin-top: 2em;
+}
+
+/* ---- Page Elements ---- */
+
+.portfolio h2 {
+	margin: 2em 0 1.2em 0;
+}
+
+.portfolio p {
+	margin: 0.6em 0 2.8em 0;
+}
+
+#contact h3 {
+	font-size: 1.2em;
+	font-weight: 700;
+	color: #252525;
+	margin: 2em 0;
+}
+
+.contact-info {
+	margin: 3em 0;
+}
+
+.footer-name{
+	float: left;
+	font-size: 1.2em;
+	color: #252525;
+}
+
+.back a{
+	float: right;
+	color: #252525;
+}
+
+#footer-nav {
+	display: none;
+}
+
+.phone,
+.email {
+	display: block;
+	font-weight: 700;
+	color: #252525;
+}
+
+.phone a,
+.email a{
+	padding-left: .8em;
+}
+
+/* ---- Float clearfix ---- */
+
+.clearfix::after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 768px) {
+
+	/**********************************
+	TWO COLUMN LAYOUT
+	***********************************/
+	
+	/* ---- Navigation ---- */
+
+	.main-nav ul{	
+		display: inline-block;	
+	}		
+
+	.main-nav li {
+		float: left;
+		margin: .5em 2em 0 0;
+		padding: 0;
+		background-color: transparent;
+	}
+
+	.main-nav li:last-child {
+		margin-right: 0;
+	}
+
+	/* ---- Profile section ---- */
+
+	.profile .container {
+		padding: 0 2em;
+	}
+
+	.profile img {
+		float: right;
+		margin-left: 3%;
+	}
+
+	.profile p {
+		text-align: left;
+	}
+
+	/* ---- Portfolio section ---- */
+
+	.gallery li {
+		float: left;
+		width: 45%;
+		margin: 2.5%;
+	}
+
+	.gallery li:nth-child(2n + 1) {
+	  clear: left;
+	}
+
+	/* ---- Footer section ---- */
+
+	.back {
+		display: none;
+	}
+
+	#contact p {
+		display: inline-block;
+		width: 70%;
+	}
+
+	#footer-nav {
+		display: inline-block;
+		float: right;
+		font-size: .8em;
+	}
+}
+
+@media (min-width: 1024px) {
+
+	/**********************************
+	THREE COLUMN LAYOUT
+	***********************************/
+
+	/* ---- Layout Container ---- */
+	
+	body {
+		background-color: #f8f8f8;
+		max-width: 1250px;	
+		margin: 0 auto;		
+	}
+
+	.portfolio {
+		margin: 0 2%;
+		background-color: #fff;
+	}
+
+	/* ---- Navigation ---- */
+
+	.main-nav{
+	    padding: 0 1.6%;
+	}
+
+	.main-nav ul {	
+		float: right;
+		padding-top: 1em;
+	}	
+
+	#footer-nav ul {
+		padding-top: 0;
+	}
+
+	.main-nav a {
+		font-size: 1.1em;
+	}	
+
+	.name {	
+		float: left;
+	}
+	
+	/* ---- Profile section ---- */
+	
+	.profile img {
+		margin-left: 8%;
+	}
+
+	.profile p {
+		width: 60%;
+		max-width: 1150px;
+	}
+
+	/* ---- Portfolio section ---- */
+
+	.gallery li {
+		float: left;
+		width: 28.3333%;
+	}
+
+	.gallery li:nth-child(2n + 1) {
+	  clear: none;
+	}
+
+	.gallery li:nth-child(3n + 1) {
+	  clear: left;
+	}
+
+	/* ---- Contact section ---- */
+
+	#contact h3 {
+		margin-bottom: 1em;
+	}
+
+	.contact-info {
+		margin-top: 1.2em;
+	}
+
+	#contact p {
+		width: 50%;
+	}
+
+}

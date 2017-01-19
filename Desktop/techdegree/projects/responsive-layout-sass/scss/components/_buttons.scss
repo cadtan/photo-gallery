@@ -1,0 +1,10 @@
+.back-to-top {
+	float: right;
+
+	@include media(tablet) {
+		display: none;
+	}
+}
+
+
+

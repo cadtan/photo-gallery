@@ -1,0 +1,334 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Nunito', sans-serif;
+	font-weight: 400;
+	line-height: 2;
+	color: #666;
+}
+
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+.wrapper {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 12px;
+}
+
+.video-container {
+	position: relative;
+    overflow: hidden;
+}
+
+video {
+	width: 100%;
+}
+
+#caption {
+	font-size: 0.7em;
+	cursor: pointer;
+	height: 100px;
+	overflow-x: hidden;
+}
+
+.hightlight {
+	background-color: #1AB6FF;
+  color: #FFF;
+}
+
+.hover {
+  color: #1E9CC0;
+}
+
+/* ---- Video controls ---- */
+
+.video-controls {
+	width: 100%;
+	height: 35px;
+	background-color: rgba(0,0,0, 0.8);
+	position: absolute;
+   	bottom: -50px;
+	-webkit-transition: bottom  0.5s ease-out;
+	-moz-transition: bottom  0.5s ease-out;
+	-ms-transition: bottom  0.5s ease-out;
+	-o-transition: bottom  0.5s ease-out;
+	transition: bottom ease 0.5s;
+}
+
+.video-container:hover .video-controls {
+	bottom: 5px;
+}
+
+.video-container:hover #progress  {
+	bottom: 45px;
+}
+
+#controls-left {
+  width: 30%;
+	float: left;
+}
+
+#controls-right {
+  float: right;
+  width: 70%;
+}
+
+button {	
+	background: transparent;
+	border: none;
+	padding: 0;
+}
+
+button img {
+	width: 40%;
+}
+
+#fullscreen img {
+	width: 60%;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+#mute img,
+#playback-speed {
+  display: none;
+}
+
+#playtime {
+	width: 20%;
+	font-size: 12px;
+	display: inline;
+	color: #FFF;
+}
+
+#volume-bar {
+ vertical-align: middle;
+ width: 65%;
+}
+
+/* ---- Progress bar ---- */
+
+#progress {
+	width: 100%;
+	height: 15px;
+    position: absolute;
+    bottom: 12px;  
+    opacity: 0.8; 
+    -webkit-transition: bottom  0.5s ease-out;
+    -moz-transition: bottom  0.5s ease-out;
+    -ms-transition: bottom  0.5s ease-out;
+    -o-transition: bottom  0.5s ease-out;
+    transition: bottom ease 0.5s;
+}
+
+#progress-amount {
+  display: block;
+  height: 100%;
+  background-color: #098BEF;
+  width: 0;
+}
+
+#progress-bar {
+	position: absolute;
+	z-index: 1;
+}
+
+#progress-bar,
+.progress {
+	width: 100%;
+}
+
+.buffer-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0.3;
+}
+
+
+/* ================================= 
+  Range slider
+==================================== */
+
+/*********** CHROME ***********/
+
+input[type=range]{
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #098BEF;
+    margin-top: -5px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+}
+
+
+/*********** FIREFOX ***********/
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 5px;
+    background: #ddd;
+    border: none;
+}
+
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #098BEF;
+}
+
+/*hide the outline behind the border*/
+input[type=range]:-moz-focusring{
+    outline: 1px solid white;
+    outline-offset: -1px;
+}
+
+input[type=range]:focus::-moz-range-track {
+    background: #ccc;
+}
+
+
+/********** IE ***********/
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 4px;
+    
+    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+    background: transparent;
+    
+    /*leave room for the larger thumb to overflow with a transparent border */
+    border-color: transparent;
+    border-width: 6px 0;
+
+    /*remove default tick marks*/
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: #777;
+}
+input[type=range]::-ms-fill-upper {
+    background: #ddd;
+}
+input[type=range]::-ms-thumb {
+    border: none;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background:  #098BEF;
+    margin-top: 1px;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #888;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #ccc;
+}
+
+
+
+
+/* ---- Float clearfix ---- */
+
+.clearfix::after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media screen and (min-width: 353px) {
+	.wrapper {
+		max-width: 860px;
+	}
+
+  #controls-left {
+    width: 50%;
+  } 
+
+  #controls-right {
+    width: 45%;
+  } 
+
+	#caption {
+		font-size: 0.8em;
+		line-height: 1.6em;
+	}
+}
+
+@media screen and (min-width: 760px) {
+  #controls-left {
+    width: 65%;
+  } 
+
+  #controls-right {
+    width: 35%;
+  } 
+
+  #volume-bar {
+   vertical-align: middle;
+   width: 45%;
+  }
+
+  #mute img {
+    width: 60%;
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+  #playback-speed {
+    display: inline-block;
+    border: 1px solid #CCC;
+    opacity: 0.5;
+    color: #FFF;
+    font-size: 0.7em;
+    width: 50px;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: #000;
+  }
+
+	#caption {
+		font-size: 0.9em;
+		line-height: 1.8em;
+	}
+}

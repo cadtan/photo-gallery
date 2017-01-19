@@ -1,0 +1,56 @@
+.profile {
+	& img {
+		@include media(tablet) {
+			float: right;
+			margin-left: 3%;
+		}
+
+		@include media(desktop) {
+			margin-left: 8%;
+		}
+	}
+
+	& p {
+		@include media(tablet) {
+			text-align: left;
+		}
+
+		@include media(desktop) {
+			width: 40%;
+			max-width: 1150px;
+		}
+	}
+} 
+
+.gallery {
+	& li {
+		@include media(tablet) {
+			float: left;
+			width: 45%;
+			margin: 2.5%;
+		}
+
+		@include media(desktop) {
+			float: left;
+			width: 28.3333%;
+		}
+	}
+
+	& li:nth-child(2n + 1) {
+		@include media(tablet) {
+		  clear: left;
+		}
+
+		@include media(desktop) {
+			clear: none;
+		}
+	}
+
+	& li:nth-child(3n + 1) {
+		@include media(desktop) {
+			clear: left;
+		}
+	}
+}
+
+

@@ -1,0 +1,57 @@
+/* Base Styles -------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include text(1em, 1.6, 400, $content-text-base, 0.03em);
+  font-family: $stack-Roboto;
+
+  @include media(desktop) {
+    background-color: $color-background;
+    max-width: 1250px;  
+    margin: 0 auto; 
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+h2,
+h3 {
+  font-family: $stack-Roboto-Condensed;
+  font-weight: 700;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+
+/* Pseudo-classes ------------------ */
+
+a {
+  &:link,
+  &:visited,
+  &:active {
+    text-transform: uppercase;
+    color: $color-link-default;
+  }
+
+  &:hover{
+    color: $color-link-hovered;
+  }
+}
+
+
+

@@ -1,0 +1,32 @@
+// Descriptive color variabless
+
+$white      : #fff;
+$black		: #000;
+$grey		: #878787;
+$Dove-Gray 	: #686868;
+
+
+// Functional color variables
+
+$content-text-base 	: $black;
+
+$color-link-default	: $Dove-Gray;
+$color-link-hovered : lighten($Dove-Gray, 25%);
+
+$color-background 	: lighten($grey, 45%);
+
+
+// Font stacks
+
+$stack-sans-serif 		: Helvetica, Arial, sans-serif;
+$stack-Roboto 			: 'Roboto', $stack-sans-serif;
+$stack-Roboto-Condensed : 'Roboto Condensed', $stack-sans-serif;
+
+
+// Media query breakpoints
+
+$brk-medium	: 768px;
+$brk-large	: 1024px;
+
+
+
