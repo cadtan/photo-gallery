@@ -9,7 +9,6 @@
 }
 
 body {
-	/*font-family: 'Roboto', sans-serif;*/
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
 	text-align: center;
@@ -386,8 +385,6 @@ h3 {
 	padding: 2em;
 }
 
-
-
 #tab-1 .photo {
 	background-image: url('../images/instructor01.jpg');
 }
@@ -485,8 +482,6 @@ footer p {
 .social-icon:last-child {
 	margin-bottom: 1em;
 }
-
-
 
 
 /* ================================= 
@@ -590,13 +585,10 @@ footer p {
 		background-image: url('../images/banner3.jpg');
 	}
 
-
-
 	.slider button {
 		position: absolute;
 		display: block;
 		background-color: rgba(0, 0, 0, 0.3);		
-		/*background: transparent;*/
 		opacity: 0;
 		outline: 0;
 		border: 0;
@@ -611,7 +603,6 @@ footer p {
 		z-index: 2;
 	}
 
-
 	.previous {
 		left: 0;
 	}
@@ -622,7 +613,6 @@ footer p {
 
 	.slides:hover ~ button {
 	  opacity: 1.0;
-	  /*display: block;*/
 	}
 
 	.slider button:hover, .slider button:active {
@@ -639,7 +629,6 @@ footer p {
 		font-size: 3em;
 		display: inline-block;
 	}
-
 
 	.banner-title {
 		text-transform: uppercase;
@@ -662,7 +651,6 @@ footer p {
 	}
 
 
-
 	/*--- Services Section ----- */
 
 	.services-title {
@@ -670,7 +658,7 @@ footer p {
 	 }
 
 	.services {
-		background-image: url('../images/services-bg2.jpg');
+		background-image: url('../images/services-bg.jpg');
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
@@ -742,7 +730,6 @@ footer p {
 		bottom: 0;
 		float: left;
 	}
-
 
 	/*--- Footer Section ----- */
 
@@ -911,12 +898,16 @@ footer p {
 	   padding-top: 0;
 	} 
 
+	.class-desc .date {
+		font-size: .9em;
+		margin-bottom: .6em;
+	}
+ 
 
 	.class-desc p {
 		width: 95%;
 		margin: 0;
 	}
-
 
 	/*--- Instructors Section ----- */
 
@@ -927,11 +918,9 @@ footer p {
 	.tab {
 		padding: 1em 0;		
 	}
-
 	
 	/*--- Footer Section ----- */
 
-	
 	footer {
 		padding: 6% 10%;
 	}

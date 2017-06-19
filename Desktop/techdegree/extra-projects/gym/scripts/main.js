@@ -3,7 +3,6 @@
   Parallax Scrolling
 ==================================== */
 
-
 window.addEventListener("DOMContentLoaded", scrollLoop, false);
 
 	var yScrollPosition;
@@ -46,7 +45,6 @@ $('#nav-bar li a').on('click', function() {
 });
 
 
-
 /* ================================= 
   Tabs for Instuctors Section
 ==================================== */
@@ -60,7 +58,6 @@ $('.tab').on('click', function() {
 	$(this).addClass('current');
 	$('#'+tab_id).addClass('current');
 });
-
 
 
 /* ================================= 
